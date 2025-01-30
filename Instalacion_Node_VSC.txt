@@ -1,0 +1,16 @@
+Node en VSC
+
+npm -g install
+npm init
+
+node -v
+
+//COMPILAR EN EL DIRECTORIO DE TYPESCRIPT
+tsc
+
+CREA ASÍ TODAS LAS CARPETAS NECESARIAS
+ts.config:
+
+SE PUEDE CAMBIAR LA RUTA EN 
+"rootDir" : "src"
+"outDir" : "../carpetaDestino"

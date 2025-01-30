@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .order{
+            border: 1px solid transparent;
+            padding: 5px;
+            margin: 3px;
+            cursor: pointer;
+        }
+        .order[data-saldo="beneficio"]{
+            background-color: green;
+        }
+        .order[data-saldo="deficit"]{
+            background-color: red;
+        }
+        .order[data-saldo="cero"]{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <span class="order" data-saldo="beneficio">5</span>
+    <select class="order" data-saldo="beneficio" name="select" >
+        <option value="beneficio">Beneficio</option>
+        <option value="deficit">Deficit</option>
+        <option value="cero">Cero</option>
+    </select>
+    <script>
+        let referencia = document.querySelector(".order");
+        let referencia2 = document.querySelector("select");
+
+        //EN CONSOLA ESCRIBE EL TEXTO DEL ESTADO SEGÚN LA CONDICIÓN DEL MÉTODO
+        referencia2.addEventListener("change", (e) =>{
+            console.log("e value: ", e.target.value);
+            referencia.dataset.saldo = e.target.value;
+            referencia2.dataset.saldo = e.target.value;
+
+        });
+
+        //FUNCIÓN QUE HACE CAMBIAR DE COLOR SEGÚN LA OPCIÓN ESCOGIDA
+        function cambiarColor (e,valor = -1){
+                        
+            console.log(valor);
+            if (valor > 0) {
+                referencia.dataset.saldo = "beneficio";
+                referencia.innerHTML = valor;
+            }
+            if (valor < 0) {
+                referencia.dataset.saldo = "deficit";
+                referencia.innerHTML = valor;
+            }
+            if (valor === 0) {
+                referencia.dataset.saldo = "cero";
+                referencia.innerHTML = valor;
+            }
+        }
+
+        referencia.addEventListener("click",cambiarColor);
+
+    </script>
+</body>
+</html>

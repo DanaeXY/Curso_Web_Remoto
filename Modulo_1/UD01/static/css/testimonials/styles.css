@@ -1,0 +1,56 @@
+@import url("./css/footer.css");
+
+:root {
+  --color-blanco: white;
+  --color-rojo: red;
+  --letra-bebas: "Bebas Neue", sans-serif;
+  --letra-poppins: "Poppins", serif;
+  --borde-rojo: 1px solid red;
+}
+
+body {
+  background-color: black;
+  
+  
+  header {
+    color: var(--color-blanco);
+    font-family: var(--letra-bebas);
+    font-size: xx-large;
+    text-align: center;
+    margin-top: 150px;
+
+    span {
+      color: var(--color-rojo);
+    }    
+  }
+
+  main{
+    color: var(--color-blanco);
+    text-align: center;
+    margin-top: 50px;
+    
+    pre{
+      font-family: var(--letra-poppins);
+      font-size: small;
+    }
+
+    .checked {
+      color: orange;
+      margin-top: 20px;
+   }
+
+   div{
+    font-family: var(--letra-bebas);
+    font-size: x-large;
+    margin-top: 30px;
+   }
+
+   img{
+    border: var(--borde-rojo);
+    height: auto;
+    width: 140px;
+    margin-top: 20px;
+   }
+    
+  }
+}

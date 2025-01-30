@@ -1,0 +1,90 @@
+@import url("./css/footer.css");
+@import url("./css/variables.css");
+
+:root {
+  --color-blanco: white;
+  --color-rojo: red;
+  --letra-bebas: "Bebas Neue", sans-serif;
+  --letra-poppins: "Poppins", serif;
+  --alto-foto: 536px;
+  --ancho-foto: 388px;
+  --border-imagen: 1px solid red;
+}
+
+@media (min-width: 320px) {
+  body {
+    background-color: black;
+    color: var(--color-blanco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    box-sizing: content-box;
+
+    section{
+      h1 {
+        font-family: var(--letra-bebas);
+        font-size: 45px;
+        text-align: center;
+      }
+  
+      span {
+        color: var(--color-rojo);
+      }
+  
+      div {
+        text-align: center;
+      }
+
+      nav,
+      scroll-container {
+        /* display: block; */
+        margin: 0 auto; /* forma de centrar elementos */
+        text-align: center;
+      }
+      nav {
+        padding: 15px;
+        width: 280px;
+        margin-top: 10px;
+
+        a{ /* botones inferiores para la navegación */
+          width: 15px;
+          height: 15px;
+          background-color: #e2e2e2;
+          display: inline-flex;
+          border-radius: 50%;
+          opacity: 0.5;
+  
+        }
+        
+      }
+      scroll-container {
+        display: block;
+        width: 350px;
+        height: 350px;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+        transform: rotate(90deg);
+      }
+      scroll-page {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        font-size: 5em;
+      }
+      .imaxen {
+        width: 250px;
+        height: 100%;
+        transform: rotate(-90deg);
+      }
+      .imaxen-nav {
+        width: 100%;
+      }
+      
+    }
+  }
+}

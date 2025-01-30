@@ -1,0 +1,10 @@
+:root{
+    --fondo_barra_lateral: linear-gradient(to bottom, #4a90e2, #357abd);
+    --color-fondo-body: #f9fbfd;
+    --color-barra: #fff;
+    --color-fondo-azul: #4C8DEB;
+    --familia-Arial: Arial, sans-serif;
+    --familia-Mulish: "Mulish", serif;
+    --ancho-imagen-superior: 100%;
+
+}

@@ -1,0 +1,7 @@
+DEBE ESTAR INSTALADO NODE:
+npx create-react-app my-react-app //instalado en VSC el 28/01/2025
+
+cd my-react-app
+
+npm start
+

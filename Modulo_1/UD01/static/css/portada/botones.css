@@ -1,0 +1,26 @@
+:root{
+    --letra-mayuscula: uppercase;
+}
+
+button[name=cta]{
+    grid-column-start: 3;
+    background-color: var(--color-rojo);
+    color: var(--color-blanco);
+    border: none;
+    height: 50px;
+    width: 150px;
+    justify-self: center;
+    text-transform: var(--letra-mayuscula);
+}
+button[name=cta2]{
+     
+    background-color: transparent;
+    border: var(--border-rojo);
+    color: var(--color-rojo);
+    height: 60px;
+    width: 150px;
+    margin-left: 95px;
+    margin-top: 35px;
+    text-transform: var(--letra-mayuscula);
+      
+}

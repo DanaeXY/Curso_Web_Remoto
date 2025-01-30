@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--INTRODUCIENDO NOMBRE-->
+<script>
+    function validateForm() {
+      let x = document.forms["myForm"]["fname"].value;
+      if (x == "") {//SI ESTÁ VACÍO DEVUELVE EL RESULTADO SIGUIENTE
+        alert("El campo nombre debe ser rellenado");
+        return false;
+      }
+    }
+    </script>
+<!--INTRODUCIENDO NÚMEROS-->
+<script>
+    function myFunction() {
+      // Get the value of the input field with id="numb"
+      let x = document.getElementById("numb").value;
+      // If x is Not a Number or less than one or greater than 10
+      let text;
+      if (isNaN(x) || x < 1 || x > 10) {//VALIDACIÓN DE NUMERO ENTRE 1 Y 10
+        //isNaN pasa el valor introducido a número si no se puede devuelve true
+        text = "Input not valid";
+        document.getElementById("respuesta").style.color = 'red';
+      } else {
+        text = "Input OK";
+        document.getElementById("respuesta").style.color = 'green';
+      }
+      document.getElementById("respuesta").innerHTML = text;
+      
+    }
+    </script>
+
+<!--PASAR EL RATÓN SOBRE EL RECUADRO-->
+
+<script>
+    function mOver(obj) {
+      obj.innerHTML = "HOLI!"
+    }
+    
+    function mOut(obj) {
+      obj.innerHTML = "PASA EL RATÓN"
+    }
+    </script>
+
+
+
+</head>
+<body>
+
+<h2>Validación en JavaScript</h2>
+
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+  <label>Nombre: </label> 
+  <input type="text" name="fname">
+  <input type="submit" value="Enviar">
+</form>
+
+<!-- ----------------------------- -->
+<p>Introduce un número entre 1 y 10:</p>
+
+<input type="number" id="numb">
+
+<button type="button" onclick="myFunction()">Validar</button>
+
+<p id="respuesta"></p>
+
+<!-- ----------------------------- -->
+<div onmouseover="mOver(this)" onmouseout="mOut(this)" 
+style="background-color:rgb(216, 82, 104);width:120px;height:20px;padding:40px; color: white;">
+PASA EL RATÓN</div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+:root {
+  --color-blanco: white;
+  --color-rojo: red;
+  --letra-bebas: "Bebas Neue", sans-serif;
+  --letra-poppins: "Poppins", serif;
+  --alto-foto: 536px;
+  --ancho-foto: 388px;
+  --border-imagen: 1px solid red;
+  --border-input: 1px solid white;
+}
+
+body{
+  background: linear-gradient(to top, black, transparent), url("../../imagenes/cta_chico.png");
+  background-position: 300px 100px;
+  background-repeat:no-repeat;
+  background-color: black;
+  
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  color: var(--color-blanco);
+
+  header{
+    grid-column-start: 2;
+    font-family: var(--letra-bebas);
+    font-size: xx-large;
+    text-align: left;
+    margin-top: 25px;
+
+    span{
+      color: var(--color-rojo);
+      font-family: var(--letra-bebas);
+      
+    }
+  }
+
+  main{
+    grid-column-start: 2;
+    grid-row-start: 2;
+    text-align: left;
+    
+    article > div {
+
+      font-family: var(--letra-poppins);
+      font-size: small;
+    }
+
+    form{
+      margin-top: 15px;
+
+      input{
+        height: 80px;
+        width: 250px;
+        background-color: transparent;
+        border: var(--border-input);
+        margin-right: 20px;
+
+      }
+
+    }
+    button{
+      color: var(--color-rojo);
+      background-color: transparent;
+      border: var(--border-imagen);
+      height: 100px;
+      width: 200px;
+      margin-top: 50px;
+    }
+
+    
+  }
+
+}
