@@ -1,0 +1,12 @@
+:root{
+    --color-blanco:white;
+    --color-rojo:red;
+    --letra-bebas: "Bebas Neue", sans-serif;
+    --letra-poppins: "Poppins", serif;
+    --alto-articulo: 225px;
+    --ancho-articulo:500px;
+    --margen_interior_recuadro: 10px 10px 20px 30px;
+  
+
+}
+/* ES MÁS ÚTIL CREAR UN ARCHIVO DE VARIABLES PARA PODER MODIFICARLO CUANDO SEA PRECISO */
