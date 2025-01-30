@@ -4,7 +4,7 @@ const livereload = require('livereload');
 const connectLivereload = require('connect-livereload');
 
 const app = express();
-const PORT = 3000;
+const PORT = 3000;//CAMBIAR EL PUERTO EN CADA SERVIDOR
 
 // 1. Configurar LiveReload
 const liveReloadServer = livereload.createServer();
