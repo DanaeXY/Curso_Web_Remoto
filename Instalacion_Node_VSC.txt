@@ -1,10 +1,38 @@
 Node en VSC
 
-npm -g install
-npm init
+**puede instalarse en la carpeta madre y generar un server.js para cada carpeta, cambiando el servidor (3000,3001,3002, etc)
 
-node -v
+npm init -y
+npm i express
 
+hacer carpeta static e introducir el HTML
+(pueden enlazarse más cambiando el archivo server.js)
+
+verificar que el archivo server.js tiene el siguiente contenido:
+
+const express = require('express');
+const path = require('path');
+
+const app = express();
+const PORT = 3000;
+
+// Middleware para servir archivos estáticos
+app.use(express.static(path.join(__dirname, 'static')));
+
+// Ruta principal que envía el archivo HTML
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'static', 'index.html'));
+});
+
+app.listen(PORT, () => {
+    console.log(`Servidor corriendo en http://localhost:${PORT}`);
+});
+
+
+node server
+
+
+---------------------------------------------------------------------------
 //COMPILAR EN EL DIRECTORIO DE TYPESCRIPT
 tsc
 
@@ -14,3 +42,4 @@ ts.config:
 SE PUEDE CAMBIAR LA RUTA EN 
 "rootDir" : "src"
 "outDir" : "../carpetaDestino"
+
