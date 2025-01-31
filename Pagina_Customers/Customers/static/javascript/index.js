@@ -8,37 +8,40 @@ function crearBarraCabecera() {
 
   //IMAGEN SUPERIOR
   const grupoIzquierda = document.createElement("div");
-  grupoIzquierda.id="grupoIzquierda";
+  grupoIzquierda.id="grupoIzquierda";//disco perfil + buscador
 
   const imagenPerfilIzq = document.createElement("img");// Crear elemento img
-  imagenPerfilIzq.className = "imagenPerfilIzq";
+  imagenPerfilIzq.className = "imagenPerfilIzq";//disco perfil izquierda
 
   const imagenSearch = document.createElement("img"); // Crear elemento img
-  imagenSearch.className = "imagenSearch";
+  imagenSearch.className = "imagenSearch";//buscador
 
   const grupoDerecha = document.createElement("div");
-  grupoDerecha.id="grupoDerecha"; 
+  grupoDerecha.id="grupoDerecha"; //notificaciones + circulo perfil
 
   const imagenNotificaciones = document.createElement("img"); // Crear elemento img
-  imagenNotificaciones.className = "imagenNotificaciones";
+  imagenNotificaciones.className = "imagenNotificaciones";//notificaciones
 
   const imagenPerfilDcha = document.createElement("img"); // Crear elemento img
-  imagenPerfilDcha.className = "imagenPerfilDcha";
+  imagenPerfilDcha.className = "imagenPerfilDcha";//disco perfil derecha
   
+  //suministrar rutas de los imágenes
   imagenPerfilIzq.setAttribute("src", "./imagenes/barra_superior/profileIzq.svg");
   imagenSearch.setAttribute("src", "./imagenes/barra_superior/search.svg");
   imagenNotificaciones.setAttribute("src", "./imagenes/barra_superior/notifications.svg");
   imagenPerfilDcha.setAttribute("src", "./imagenes/barra_superior/profileDcha.svg");
 
+  //AÑADIR LAS IMÁGENES A CADA GRUPO
   grupoIzquierda.appendChild(imagenPerfilIzq);
   grupoIzquierda.appendChild(imagenSearch);
   grupoDerecha.appendChild(imagenNotificaciones);
   grupoDerecha.appendChild(imagenPerfilDcha);
   
+  //AÑADIR LOS GRUPOS A LA BARRA
   barraSuperior.appendChild(grupoIzquierda);
   barraSuperior.appendChild(grupoDerecha);
 
-  return barraSuperior;
+  return barraSuperior;//DEVOLUCIÓN DE LA FUNCIÓN
 }
 
 function crearBarraLateral() {
@@ -46,7 +49,7 @@ function crearBarraLateral() {
   const barraLateral = document.createElement("div");
   barraLateral.className = "barraLateral";
 
-  //ICONO DE PERFIL Y ARRAY CON LOS ICONOS DE LA BARRA barraLateral
+  //ARRAY CON LOS ICONOS DE LA BARRA LATERAL
   const iconosBarraLateral = [
     "./imagenes/menu_lateral/home.svg",
     "./imagenes/menu_lateral/customers.svg",
@@ -60,27 +63,27 @@ function crearBarraLateral() {
     img.src = icon;
     img.className = "iconosBarraLateral";
 
-    barraLateral.appendChild(img);
+    barraLateral.appendChild(img);//AÑADIR TODO A LA BARRA LATERAL
   });
 
   return barraLateral;
 }
 
 function crearContenidoPrincipal() {
-  // CREAR CONTENIDO PRINCIPAL
+  // CREAR CONTENEDOR PRINCIPAL
   const main = document.createElement("div");
   main.className = "main";
 
-  //AÑADIR UNA CABECERA PARA INTRODUCIR EL TEXTO CUSTOMERS
-  const header = document.createElement("div");
+  //AÑADIR UN CONTENEDOR DE CABECERA PARA INTRODUCIR TÍTULO DE PÁGINA
+  const header = document.createElement("div"); 
   header.className = "main-header";
 
-  //AÑADIR TITULO CON SU PROPIA BARRA
+  //AÑADIR TITULO
   const headerTitle = document.createElement("h1");
   headerTitle.textContent = "Customers";
   header.appendChild(headerTitle);
 
-  //AÑADIR + ADD NEW
+  //AÑADIR BOTÓN + ADD NEW
   const anhadirNuevo = document.createElement("button");
   anhadirNuevo.className = "botonAnhadir";
   anhadirNuevo.textContent = "+ Add New";
@@ -89,11 +92,11 @@ function crearContenidoPrincipal() {
   // AÑADIR EL HEADER AL MAIN
   main.appendChild(header);
 
-  //AÑADIR OTRO DIV PARA LA HAMBURGUESA
+  //AÑADIR OTRO DIV PARA LA HAMBURGUESA + BOTON AÑADIR
   const div2 = document.createElement("div");
   div2.className = "divHamburguesa";
 
-  //ICONO DE LA HAMBURGUESA A LA DERECHA DEL MISMO DIV
+  //AÑADIR IMG PARA INTRODUCIR LA IMAGEN DE LA HAMBURGUESA
   const hamburguesa = document.createElement("img");
   hamburguesa.className = "icono-hamburguesa";
   hamburguesa.setAttribute("src", "./imagenes/group.svg");
@@ -106,7 +109,7 @@ function crearContenidoPrincipal() {
   //CREAR BODY DE LA TABLA
   const tblBody = document.createElement("tbody");
 
-  //DATOS PARA LA VISTA
+  //ARRAY ASOCIATIVO CON DATOS DE LOS EMPLEADOS PARA LA VISTA (EN VERSIÓN REAL CONECTARÍA CON BBDD Y TRAERÍA LOS DATOS)
   const data = [
     { avatar: "./imagenes/perfil/Ellipse1.svg", name: "Devon Lane", email: "tranthuy@gmail.com", status: "Busy", role: "Bot Analyst",},
     { avatar: "./imagenes/perfil/Ellipse2.svg", name: "Darlene Robertson", email: "thungkienspktnd@gmailcom", status: "Working",role:"Reporter",},
@@ -122,26 +125,26 @@ function crearContenidoPrincipal() {
 
   //CABECERA DE LA TABLA
   const thead = document.createElement("thead");
-  const headerRow = document.createElement("tr");
+  const grupoCabecera = document.createElement("tr");
 
-  //CABECERAS DE LAS COLUMNAS
+  //CREO Y RECORRO UN ARRAY DE LOS NOMBRES DE LAS CABECERAS DE LA TABLA
   ["Name", "Email", "Status", "Role","Actions"].forEach((text) => {
-    const th = document.createElement("th");
-    th.textContent = text;
+    const cabeceraColumnas = document.createElement("th");
+    cabeceraColumnas.textContent = text;
 
-    headerRow.appendChild(th);
+    grupoCabecera.appendChild(cabeceraColumnas);//AÑADO CADA TEXTO DE CABECERA A CADA COLUMNA
   });
 
-  thead.appendChild(headerRow);
+  thead.appendChild(grupoCabecera);
   tabla.appendChild(thead);
 
-  // Crear el cuerpo de la tabla con el espacio para los datos que desamos añadir
+  // LEE EL ARRAY DE LOS DATOS DE LOS TRABAJADORES Y LOS AÑADE A CADA FILA, BAJO SU NOMBRE DE CABECERA
   data.forEach((item) => {
     const row = document.createElement("tr");
 
     const nameCell = document.createElement("td");
     const avatarImg = document.createElement("img");
-    nameCell.textContent = item.name;
+    nameCell.textContent = item.name;//AÑADE EL NOMBRE DEL TRABAJADOR
     avatarImg.className = "fotoPerfilTabla";
     avatarImg.setAttribute("src", item.avatar);
     avatarImg.setAttribute("alt", "perfil");
@@ -149,15 +152,15 @@ function crearContenidoPrincipal() {
     nameCell.prepend(avatarImg); //AÑADIR EL AVATAR JUNTO AL NOMBRE
 
     const emailCell = document.createElement("td");
-    emailCell.textContent = item.email;
+    emailCell.textContent = item.email;//AÑADE EL MAIL DEL TRABAJADOR
 
     const statusCell = document.createElement("td");
-    statusCell.textContent = item.status;
+    statusCell.textContent = item.status;//AÑADE EL STATUS DEL TRABAJADOR
 
     const roleCell = document.createElement("td");
-    roleCell.textContent = item.role;
+    roleCell.textContent = item.role;//AÑADE EL ROLE DEL TRABAJADOR
 
-    // Asignar clase según el estado para cambiarle el color según resultado
+    // Asignar clase según el estado para cambiarle el color según resultado en CSS
     switch (item.status) {
       case "Busy":
         statusCell.classList.add("status-busy");
@@ -173,11 +176,12 @@ function crearContenidoPrincipal() {
         break;
     }
 
+    // BOTONES EDITAR
     const accionCelda = document.createElement("td");
     const editButton = document.createElement("img");
     editButton.setAttribute("src", "./imagenes/GroupEdit.svg");
 
-    accionCelda.appendChild(editButton); // BOTON EDITAR
+    accionCelda.appendChild(editButton); 
 
     //AÑADIR A CADA FILA EL NOMBRE, EMAIL, STATUS, EDICIÓN
     row.appendChild(nameCell);
@@ -186,7 +190,7 @@ function crearContenidoPrincipal() {
     row.appendChild(roleCell);
     row.appendChild(accionCelda);
 
-    tblBody.appendChild(row); //AÑAOIR LOS DATOS DEL ARRAY A LA TABLA
+    tblBody.appendChild(row); //AÑADIR LOS DATOS DEL ARRAY A LA TABLA
   });
 
   // posiciona el <tbody> dentro del elemento <table>
@@ -203,7 +207,7 @@ const barraSuperior = crearBarraCabecera();
 const barraLateral = crearBarraLateral();
 const main = crearContenidoPrincipal();
 
-//AÑADIR LOS ELEMENTOS
+//AÑADIR LOS ELEMENTOS A LA PÁGINA
 app.appendChild(barraSuperior);
 app.appendChild(barraLateral);
 app.appendChild(main);
