@@ -20,13 +20,14 @@
 
 
   .barraLateral {
-    width: 4.5%;
+    width: 4.40%;
     background: var(--fondo_barra_lateral);
     position: fixed;
-    height: 100vh;
+    height: 95vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 35px;
     
   }
 
@@ -38,7 +39,7 @@
   }
 
   .main {
-    margin-left: 70px;
+    margin-left: 100px;
     padding: 20px;
     color: #405169;
     font-family: var(--familia-Mulish);
