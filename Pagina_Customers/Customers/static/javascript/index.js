@@ -1,4 +1,4 @@
-//CONTENEDOR PPAL
+//CONTENEDOR PPAL DEL HTML
 const app = document.getElementById("app");
 
 function crearBarraCabecera() {
