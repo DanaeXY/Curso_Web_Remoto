@@ -1,0 +1,5 @@
+git Branch --> en qué rama estás
+git branch nombreRama--> crea rama
+git checkout nombreRamaAIr --> cambia a la rama mencionada
+(DESDE MAIN) git merge nombreRama -m 'Esto es un merge con mensaje' --> trae a MAIN los cambios realizados desde la rama mencionada
+git push -u origin nombreRama --> subir la rama al repositorio
