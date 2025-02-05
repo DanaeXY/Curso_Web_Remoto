@@ -32,4 +32,15 @@ body {
     font-size: x-large;
     opacity: 1;
   }
+
+  .error-message {
+    color: red;
+    font-size: 15px;
+    display: none;
+  }
+  .error input,
+  .error textarea {
+    border: 2px solid red;
+  }
+  
   
