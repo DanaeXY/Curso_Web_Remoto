@@ -2,6 +2,11 @@ body {
     background-color: #bebebe;
     font-size: x-large;
     font-family: Arial, Helvetica, sans-serif;
+
+  }
+
+  h1, #instruccionesDeCumplimentado{
+    color:#414040;
   }
   
   #nombre,
@@ -15,6 +20,7 @@ body {
   
   label{
     font-weight: bold;
+    color: #414040;
   }
 
   span {
@@ -50,3 +56,50 @@ body {
     color: rgb(83, 82, 82);
     font-size: 42px;
   }
+
+  /*-----------EDGAR-----------*/
+  
+  legend {
+    font-size: 1.15em;
+    font-weight: 500;
+    text-decoration: underline dotted 2px  #414040;
+  }
+  
+  
+  /* .l_requerido::after {
+    content: " (requerido) :";
+    font-weight: 150;
+    font-size: 0.75em;
+  } */
+  
+  .is_required::after {
+    content: "(*)";
+    font-size: 1.05em;
+    color: firebrick;
+    margin-left: 4px;
+  }
+  
+  #formulario::after {
+    content: "Todos los campos marcados con un (*) son obligatorios.";
+    display: block;
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: darkred;
+    margin-top: 16px;
+  }
+  
+  input {
+    margin: 5px;
+  }
+
+  #datos_usuario{
+    color:#414040;
+  }
+  /* Usar fonte tipografica sans-seriff
+  cor gris-negro (non negro)
+  Aumnentar tamaño
+  
+  Background sen moito contraste
+  Boton night mode 
+  
+   */
