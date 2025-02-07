@@ -1,5 +1,7 @@
 COMANDOS GIT:
 
+git config --global user.name "Vanessa"
+git config --global user.email mail@example.com
 git clone enlaceDeGit --> clona el repositorio remoto en la carpeta dónde se ejecute el comando clone
 git status --> toda la info de la rama en la que estamos actualmente
 git add . // git add -A --> incluye los cambios antes del commit
