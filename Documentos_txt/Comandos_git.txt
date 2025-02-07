@@ -8,7 +8,7 @@ git add . // git add -A --> incluye los cambios antes del commit
 git commit -m "mensaje" --> lleva los cambios a la cola para subir al remoto con push
 git push --> empuja los cambios del repositorio local al remoto
 git pull --> tira una copia del remoto al local con los cambios realizados (ACONSEJABLE ANTES DE EMPEZAR A TRABAJAR)
-git Branch --> en qué rama estás
+git branch --> en qué rama estás y listado
 git branch nombreRama--> crea rama
 git checkout nombreRamaAIr --> cambia a la rama mencionada
 (DESDE MAIN) git merge nombreRama -m 'Esto es un merge con mensaje' --> trae a MAIN los cambios realizados desde la rama mencionada
