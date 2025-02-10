@@ -17,6 +17,7 @@ git branch -D rama_a_borrar --> eliminar una rama, -D fuerza el borrado de la ra
 git push origin --delete rama_a_borrar --> borra la rama en el repositorio remoto (GITHUB)
 git fetch --> descarga una copia de la rama en remoto a local
 (DESDE LA RAMA BASE)git merge nombreRama--> 
+(BORRAR) git rm nombreArchivo --> borra ese archivo
 
 (OJO MEJOR NO)BORRAR CAMBIOS SUBIDOS:
 git log--online --> nos da un código bash
