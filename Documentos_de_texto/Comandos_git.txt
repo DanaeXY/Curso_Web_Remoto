@@ -11,6 +11,7 @@ git pull --> tira una copia del remoto al local con los cambios realizados (ACON
 git branch --> en qué rama estás y listado
 git branch nombreRama--> crea rama
 git checkout nombreRamaAIr --> cambia a la rama mencionada
+git checkout nombreRamaConCambios -- carpeta/archivos --> trae la carpeta y el archivo especificado
 (DESDE MAIN) git merge nombreRama -m 'Esto es un merge con mensaje' --> trae a MAIN los cambios realizados desde la rama mencionada
 git push -u origin nombreRama --> subir la rama al repositorio
 git branch -D rama_a_borrar --> eliminar una rama, -D fuerza el borrado de la rama aunque haya cambios sin revisar
