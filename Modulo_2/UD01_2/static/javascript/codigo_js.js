@@ -4,5 +4,4 @@ class Calculadora{
     }
 }
 
-let objeto = new Calculadora(6,4);
-console.log(objeto.suma);
+export {Calculadora};

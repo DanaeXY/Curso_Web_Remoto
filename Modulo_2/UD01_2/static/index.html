@@ -6,7 +6,14 @@
     <title>Document</title>
 </head>
 <body>
-    
-    <script src="codigo_js.js"></script>
+    <h1>clases</h1>
+    <script type="module">
+        import {Calculadora} from "./javascript/codigo_js.js";
+
+        let objeto = new Calculadora();
+        let resultadoSuma = objeto.suma(6,4);
+
+        console.log(`El resultado de la suma es: ${resultadoSuma}`);
+    </script>
 </body>
 </html>
