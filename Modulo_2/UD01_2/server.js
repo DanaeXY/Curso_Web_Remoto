@@ -1,4 +1,4 @@
-const express = require('express');
+ const express = require('express');
 const path = require('path');
 const livereload = require('livereload');
 const connectLivereload = require('connect-livereload');
@@ -27,7 +27,11 @@ liveReloadServer.server.once("connection", () => {
     }, 100);
 });
 
+//UTILIZANDO POST Y GET
+
+
 // 6. Iniciar el servidor
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
+
