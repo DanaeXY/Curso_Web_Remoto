@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script async type="module">
+        import "./javascript/javascript.js";
+
+        const persona1 = new Persona("Carlos", 30);
+        const ui = new UIManager();
+
+        // Si intento llamar al método privado directamente (esto dará error)
+        // console.log(persona1.#saludar()); ❌ Error
+
+        // Llamando al método público que accede al privado
+        console.log(persona1.presentarse()); // ✅ Funciona correctamente
+
+        //UIManager:
+
+        // Agregar párrafo con estilos
+        ui.agregarElemento("p", "Hola, soy un párrafo dinámico", {
+            color: "white",
+            backgroundColor: "blue",
+            padding: "10px",
+            borderRadius: "5px",
+            textAlign: "center"
+        });
+
+        // Agregar botón con estilos
+        ui.agregarElemento("button", "Haz clic en mí", {
+            padding: "10px 20px",
+            fontSize: "16px",
+            cursor: "pointer",
+            backgroundColor: "green",
+            color: "white",
+            border: "none",
+            borderRadius: "5px"
+        });
+
+    </script>
+</body>
+
+</html>
