@@ -1,34 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./estilos/style.css">
-    <title>Ejercicio 1 Módulo 2</title>
+    <title>Document</title>
 </head>
+
 <body>
-    <nav>
-        <a href="./enviameDatos">enviameDatos</a>
-        <a href="./outraweb">direccion 1</a>
-        <a href="./outraweb2">direccion 2</a>
-        <a href="./">home</a>
-      </nav> 
-      <form action="/datos" method="post">
-        <div>
-          <label for="name">Nombre:</label>
-          <input type="text" id="name" name="user_name" />
-        </div>
-        <div>
-          <label for="mail">Correo electrónico:</label>
-          <input type="email" id="mail" name="user_email" />
-        </div>
-        <div>
-          <label for="msg">Mensaje:</label>
-          <textarea id="msg" name="user_message"></textarea>
-        </div>
-        <div class="button">
-          <button type="submit">Envia tu mensaje</button>
-        </div>
-      </form>
+    <script async type="module">
+        import { Persona, UIManager } from "./javascript/javascript.js";
+
+        const persona1 = new Persona("Carlos", 30);
+        const ui = new UIManager();
+
+        // Si intento llamar al método privado directamente (esto dará error)
+        // console.log(persona1.#saludar()); ❌ Error
+
+        // Llamando al método público que accede al privado
+        console.log(persona1.presentarse()); // ✅ Funciona correctamente
+
+        //UIManager:
+
+        // Agregar párrafo con estilos
+        ui.agregarElemento("p", "Hola, soy un párrafo dinámico", {
+            color: "white",
+            backgroundColor: "blue",
+            padding: "10px",
+            borderRadius: "5px",
+            textAlign: "center"
+        });
+
+        // Agregar botón con estilos
+        ui.agregarElemento("button", "Haz clic en mí", {
+            padding: "10px 20px",
+            fontSize: "16px",
+            cursor: "pointer",
+            backgroundColor: "green",
+            color: "white",
+            border: "none",
+            borderRadius: "5px"
+        });
+
+    </script>
 </body>
+
 </html>

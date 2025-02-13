@@ -1,4 +1,5 @@
-export class Persona {
+class Persona {
+
     constructor(nombre, edad) {
         this.nombre = nombre;
         this.edad = edad;
@@ -13,7 +14,8 @@ export class Persona {
     }
 }
 
-export class UIManager {
+class UIManager {
+    
     constructor() {
         this.container = document.body;
     }
@@ -30,3 +32,5 @@ export class UIManager {
         this.container.appendChild(nuevoElemento);
     }
 }
+
+export {Persona, UIManager}
