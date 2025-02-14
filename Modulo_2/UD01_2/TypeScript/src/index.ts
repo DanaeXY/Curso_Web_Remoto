@@ -1,1 +1,0 @@
-import {EtiquetaP} from "./EtiquetaP";
