@@ -1,0 +1,3 @@
+class Etiqueta {
+}
+export { Etiqueta };
