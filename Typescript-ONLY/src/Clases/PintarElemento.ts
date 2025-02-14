@@ -1,4 +1,5 @@
 class PintarElemento{
+    //DECLARAR VARIBALE PARA UBICAR EL ELEMENTO
     private referencia;
 
     constructor(referenciaEtiqueta:HTMLElement){
