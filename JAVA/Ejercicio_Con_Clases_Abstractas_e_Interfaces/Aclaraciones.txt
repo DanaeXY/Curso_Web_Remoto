@@ -1,0 +1,5 @@
+Las clases Appxxxx son las clases Main donde se instancian los métodos y se crean los objetos.
+
+Las clases abstractas crean el patrón de cómo deben crearse sus clases hijas
+
+Las interfaces son similares a las clases abstractas en que sus métodos son completamente abstractos (solo definidos) y pueden contener atributos, pero deben ser estáticos y finales. Los métodos de una interfaz son siempre públicos.
