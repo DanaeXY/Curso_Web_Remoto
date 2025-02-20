@@ -64,4 +64,4 @@ class Car {
 
 }
 
-export { Car, TipoCombustible };
+export { Car };
