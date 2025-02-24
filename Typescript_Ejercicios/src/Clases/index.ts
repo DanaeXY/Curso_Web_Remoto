@@ -21,8 +21,8 @@ Establece a súa velocidade actual en 100 km/h, aumenta a súa velocidade en 20 
 - Con cada cambio de velocidad, se debe mostrar en pantalla la velocidad actual.
 - Con cada cambio de marcha, a velocidade actual debería mostrarse na pantalla.
  */
-
-import { Car,TipoCombustible } from "./Car";
+/* 
+import { Car,TipoCombustible } from "./Car.js";
 
 let coche = new Car("Citroën", "C3", 75, TipoCombustible.gasoleo, 5, 100, 180);
 console.log(coche.acelerar(20));
@@ -32,4 +32,10 @@ console.log(coche.desacelerar(50));
 console.log(`Velocidade actual é: ${coche.velocidadeActual} km/h`);
 
 console.log(coche.frear());
-console.log(`Velocidade actual é: ${coche.velocidadeActual} km/h`);
+console.log(`Velocidade actual é: ${coche.velocidadeActual} km/h`); */
+
+import { UnXenerico } from "./Genericos.js";
+
+let generico1 = new UnXenerico<number>(5);
+let generico2 = new UnXenerico<string>("paralelepipedo");
+let generico3 = new UnXenerico<HTMLAnchorElement>(document.createElement(("a")));

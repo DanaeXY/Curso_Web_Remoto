@@ -1,5 +1,5 @@
-import {Empleado, ConcatenarTexto, Calculadora } from "./Clases_exercicio0.js"
-import { Consola, Variables, Coche, Curso } from "./Clases_exercicio1.js"
+/* import {Empleado, ConcatenarTexto, Calculadora } from "./Clases_exercicio0.js"
+import { Consola, Variables, Coche, Curso } from "./Clases_exercicio1.js" */
 /*
 --------EJERCICIOS CLASE 0-----------
 Exercicio 1
@@ -13,9 +13,9 @@ data de nacemento
 
 Crea un método o cal utilizarás para sacar os datos introducidos na instancia pola consola.*/
 
-let empleado1 = new Empleado("Obdulia", "Abad", "Sánchez", "obduabad@gmail.com", 1980);
+/* let empleado1 = new Empleado("Obdulia", "Abad", "Sánchez", "obduabad@gmail.com", 1980);
 
-console.log(empleado1.mostrarDatos());
+console.log(empleado1.mostrarDatos()); */
 
 /*Exercicio 2
 
@@ -28,12 +28,12 @@ Inicialízalas dende o constructor mediante a instancia.
 Crea un método onde crearás a concatenación e sacarás o texto por consola.
 Instancia a clase e utiliza o método creado.*/
 
-let texto1 = "Alors ";
+/* let texto1 = "Alors ";
 let texto2 = "On Dance!";
 
 let textoCompleto = new ConcatenarTexto(texto1, texto2);
 
-console.log(textoCompleto.mostrarConcatenacion());
+console.log(textoCompleto.mostrarConcatenacion()); */
 
 /*Exercicio 3
 
@@ -46,12 +46,12 @@ División
 Nun método ( que deberás crear ) o cal deberás introducir unha estructura ‘switch’ para seleccionar qué tipo de operación realizarás.
 
 */
-let calculo = new Calculadora(12,6);
+/* let calculo = new Calculadora(12,6);
 
 console.log(`El resultado de la suma es: ${calculo.sumar()}`);
 console.log(`El resultado de la resta es: ${calculo.restar()}`);
 console.log(`El producto de la multiplicacion es ${calculo.multiplicar()}`);
-console.log(`El resultado de la división es ${calculo.dividir()}`);
+console.log(`El resultado de la división es ${calculo.dividir()}`); */
 
 /**
  * EJERCICIOS CLASE 1
@@ -73,8 +73,8 @@ Instanciala clase e pasarlle as variables
 Crear unha variable para gardalo texto ou número no interior da clase (variable clase ou instancia …)
 Executa o método onde se mostra o texto*/
 
-let mostrarConsola = new Consola("Buenas tardes", 12);
-console.log("El texto introducido es: ", mostrarConsola.mostrarTextoPorConsola(), " y el número es: ", mostrarConsola.mostrarNumeroPorConsola());
+/* let mostrarConsola = new Consola("Buenas tardes", 12);
+console.log("El texto introducido es: ", mostrarConsola.mostrarTextoPorConsola(), " y el número es: ", mostrarConsola.mostrarNumeroPorConsola()); */
 
 /**
  * Exercicio 2
@@ -87,10 +87,10 @@ Outro, utilizando o constructor, introduce unha variable de entrada a cal, deber
 Utilizando a instancia á clase, saca por consola o texto ou número introducido.
  */
 
-let mostrandoDatos = new Variables(3, 121);
+/* let mostrandoDatos = new Variables(3, 121);
 
 console.log("La suma de los dos números es: ", mostrandoDatos.sumaDeDosNumeros());
-console.log("La variable introducida por el método es: ", mostrandoDatos.mostrarVariableEntrada("Coquetas"));
+console.log("La variable introducida por el método es: ", mostrandoDatos.mostrarVariableEntrada("Coquetas")); */
 
 /**
  * Exercicio 3
@@ -107,9 +107,9 @@ Lembras para que se usan?
 Saberías utilizar e crear na clase que tes esas funcións de tal xeito que utilices eses conceptos?
  */
 
-let coche1 = new Coche("Seat", "Supermirafiori", 5);
+/* let coche1 = new Coche("Seat", "Supermirafiori", 5);
 
-console.log(`El coche marca ${coche1.Marca} y modelo ${coche1.Modelo} tiene ${coche1.Puertas} puertas`);
+console.log(`El coche marca ${coche1.Marca} y modelo ${coche1.Modelo} tiene ${coche1.Puertas} puertas`); */
  
 /**
  * /**
@@ -131,7 +131,7 @@ Crea un método onde lea esta variable
 Executa o método creado no paso anterior, onde visualices dito array
  */
 
-let miCurso = new Curso();
+/* let miCurso = new Curso();
 console.log(miCurso.factura.producto.tipoClase);
 
 const meuCurso = new Curso();
@@ -144,4 +144,8 @@ const arrayDeObxectos = [
 
 
 meuCurso.lerArray(arrayDeObxectos);
-meuCurso.visualizarArray;
+meuCurso.visualizarArray; */
+import { UnXenerico } from "./Genericos.js";
+let generico1 = new UnXenerico(5);
+let generico2 = new UnXenerico("paralelepipedo");
+let generico3 = new UnXenerico(document.createElement("a"));

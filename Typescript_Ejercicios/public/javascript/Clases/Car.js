@@ -1,4 +1,4 @@
-import { TipoCombustible } from "./EnumTipoCombustible.js";
+import { TipoCombustible } from "./EnumTipoCombustible";
 class Car {
     /* Un construtor para a clase Car onde os valores dos seus atributos se pasan como parámetros*/
     constructor(marca, modelo, motor, tipoCombustible, numeroPortas, velocidadeActual, velocidadeMaxima) {
