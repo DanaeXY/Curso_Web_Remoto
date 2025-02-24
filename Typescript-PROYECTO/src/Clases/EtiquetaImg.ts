@@ -1,8 +1,8 @@
 class EtiquetaImg{
     private etiquetaImg;
 
-    constructor(etiquetaImg:HTMLImageElement){
-        this.etiquetaImg = etiquetaImg;
+    constructor(){
+        this.etiquetaImg = document.createElement("img");
     }
 
     

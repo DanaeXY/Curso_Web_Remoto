@@ -1,8 +1,8 @@
 class EtiquetaA{
     private etiquetaA;
 
-    constructor(etiquetaA:HTMLAnchorElement){
-        this.etiquetaA = etiquetaA;
+    constructor(){
+        this.etiquetaA = document.createElement("a");
     }
 
     

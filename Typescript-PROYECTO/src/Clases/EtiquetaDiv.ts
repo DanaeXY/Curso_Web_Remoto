@@ -1,8 +1,8 @@
 class EtiquetaDiv{
     private etiquetaDiv;
 
-    constructor(etiquetaDiv:HTMLDivElement){
-        this.etiquetaDiv = etiquetaDiv;
+    constructor(){
+        this.etiquetaDiv = document.createElement("div");
     }
 
     
