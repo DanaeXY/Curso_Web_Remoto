@@ -14,6 +14,10 @@ class EtiquetaH{
     introducirAtributo(clase:string){
         this.etiquetaH.setAttribute('class', clase);
     }
+
+    pintoHTML(){
+        document.body.appendChild(this.etiquetaH);
+    }
 }
 
 

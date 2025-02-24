@@ -14,6 +14,10 @@ class EtiquetaImg{
     introducirAtributo(clase:string){
         this.etiquetaImg.setAttribute('class', clase);
     }
+
+    pintoHTML(){
+        document.body.appendChild(this.etiquetaImg);
+    }
 }
 
 

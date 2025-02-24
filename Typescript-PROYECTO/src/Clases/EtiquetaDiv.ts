@@ -14,6 +14,9 @@ class EtiquetaDiv{
     introducirAtributo(clase:string){
         this.etiquetaDiv.setAttribute('class', clase);
     }
+    pintoHTML(){
+        document.body.appendChild(this.etiquetaDiv);
+    }
 }
 
 

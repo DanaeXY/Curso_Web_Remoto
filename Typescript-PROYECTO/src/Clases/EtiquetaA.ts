@@ -14,6 +14,9 @@ class EtiquetaA{
     introducirAtributoHref(direccion:string){
         this.etiquetaA.setAttribute('href', direccion);
     }
+    pintoHTML(){
+        document.body.appendChild(this.etiquetaA);
+    }
 }
 
 
