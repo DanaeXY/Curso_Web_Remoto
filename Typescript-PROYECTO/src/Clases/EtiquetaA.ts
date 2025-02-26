@@ -1,23 +1,30 @@
-class EtiquetaA{
-    private etiquetaA;
+import {Etiquetas} from "./Etiquetas.js";
 
-    constructor(){
-        this.etiquetaA = document.createElement("a");
-    }
-
-    
-    public get valorHrefEtiquetaA() {
-        return this.etiquetaA;
-    }
+class EtiquetaA extends Etiquetas{
+        
+    private etiquetaA:HTMLAnchorElement;
     
 
-    introducirAtributoHref(direccion:string){
-        this.etiquetaA.setAttribute('href', direccion);
+    constructor(etiquetaA:HTMLAnchorElement){
+        super();
+        this.etiquetaA=etiquetaA;
+        
     }
-    pintoHTML(){
+
+    crearEtiqueta(etiqueta: HTMLAnchorElement): HTMLElement {
+        etiqueta = document.createElement("a");
+        return etiqueta;
+    }
+    insertarAtributoEnEtiqueta(nombreAtributo: string): void {
+        this.etiquetaA.setAttribute("href", nombreAtributo);
+        
+    }
+    introduzcoEtiquetaEnHTML(): void {
         document.body.appendChild(this.etiquetaA);
     }
+    
 }
 
 
 export{EtiquetaA}
+

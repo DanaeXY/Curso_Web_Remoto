@@ -1,7 +1,7 @@
-import { EtiquetaDiv } from "./EtiquetaDiv.js";
-import { EtiquetaA } from "./EtiquetaA.js";
-import { EtiquetaImg } from "./EtiquetaImg.js";
-import{NavegacionMenuPrincipal} from "./MenuPrincipalPC.js"
+import { NavegacionLateral } from "./NavegacionLateral.js";
+
+
+new NavegacionLateral();
 
 
 /**let etA = new EtiquetaA(document.createElement('a'))

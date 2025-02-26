@@ -1,0 +1,3 @@
+class Etiquetas {
+}
+export { Etiquetas };
