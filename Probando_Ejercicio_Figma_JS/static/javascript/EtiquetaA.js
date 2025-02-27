@@ -1,18 +1,26 @@
 import { Etiquetas } from "./Etiquetas.js";
 class EtiquetaA extends Etiquetas {
-    constructor(etiquetaA) {
+
+    etiquetaA;
+
+    constructor() {
         super();
-        this.etiquetaA = etiquetaA;
+        this.etiquetaA = this.crearEtiqueta();
     }
-    crearEtiqueta(etiqueta) {
-        etiqueta = document.createElement("a");
-        return etiqueta;
+    crearEtiqueta() {
+        return document.createElement("a");
+        
     }
-    insertarAtributoEnEtiqueta(nombreAtributo) {
-        this.etiquetaA.setAttribute("href", nombreAtributo);
+    insertarAtributoEnEtiqueta(nombreAtributo, valor) {
+        this.etiquetaA.setAttribute(nombreAtributo, valor);
     }
-    introduzcoEtiquetaEnHTML() {
-        document.body.appendChild(this.etiquetaA);
+
+    introduzcoEtiquetaEnHTML(parent) {
+    parent.appendChild(this.etiquetaA);
+  }
+
+    getElemento(){
+        return this.etiquetaA;
     }
 }
 export { EtiquetaA };

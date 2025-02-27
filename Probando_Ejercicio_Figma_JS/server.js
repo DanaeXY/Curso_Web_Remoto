@@ -1,6 +1,6 @@
-/*comando para iniciar servidor: node server, puerto 3000*/
 const express = require("express");
-const path = require("path");
+const path = require("path"); 
+
 const app = express();
 
 

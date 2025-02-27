@@ -1,18 +1,26 @@
 import { Etiquetas } from "./Etiquetas.js";
 class EtiquetaImg extends Etiquetas {
-    constructor(etiquetaImg) {
-        super();
-        this.etiquetaImg = etiquetaImg;
+    etiquetaImg;
+
+    constructor() {
+      super();
+      this.etiquetaImg = this.crearEtiqueta();
     }
-    crearEtiqueta(etiqueta) {
-        etiqueta = document.createElement("img");
-        return etiqueta;
+  
+    crearEtiqueta() {
+      return document.createElement("img");
     }
-    insertarAtributoEnEtiqueta(nombreAtributo) {
-        this.etiquetaImg.setAttribute("src", nombreAtributo);
+  
+    insertarAtributoEnEtiqueta(nombreAtributo, valor) {
+      this.etiquetaImg.setAttribute(nombreAtributo, valor);
     }
-    introduzcoEtiquetaEnHTML() {
-        document.body.appendChild(this.etiquetaImg);
+  
+    introduzcoEtiquetaEnHTML(parent) {
+      parent.appendChild(this.etiquetaImg);
+    }
+  
+    getElemento() {
+      return this.etiquetaImg;
     }
 }
 export { EtiquetaImg };

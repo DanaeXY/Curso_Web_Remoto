@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  .sidebar {
+    background-color: blue;
+    width: 5.35%;
+    height: 900px;
+  }
+  
+  a {
+    display: block;
+    margin-top: 50px;
+  }
+  
+  img {
+    margin-left: 15px;
+  }
+  

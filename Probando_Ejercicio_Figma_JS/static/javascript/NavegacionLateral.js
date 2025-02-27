@@ -3,26 +3,36 @@ import { EtiquetaA } from "./EtiquetaA.js";
 import { EtiquetaImg } from "./EtiquetaImg.js";
 
 class NavegacionLateral {
+
     constructor() {
-        // Crear el contenedor principal
-        const divEtiqueta = new EtiquetaDiv(document.createElement("div"));
-        this.contenedor = divEtiqueta.crearEtiqueta(document.createElement("div"));
-        divEtiqueta.insertarAtributoEnEtiqueta("sidebar"); // Clase para estilos CSS
+       
+        //instancia etiqueta Div
+        const divEtiqueta = new EtiquetaDiv();
+
+        // contenedor principal
+        this.contenedor = divEtiqueta.getElemento();
+
+        divEtiqueta.insertarAtributoEnEtiqueta("class","sidebar"); // Clase 
         divEtiqueta.introduzcoEtiquetaEnHTML();
+
         // Lista de imágenes y enlaces
         const imagenes = ["../imagenes/menu_lateral/menu.svg", "../imagenes/menu_lateral/home.svg", "../imagenes/menu_lateral/customers.svg", "../imagenes/menu_lateral/new_invoice.svg", "../imagenes/menu_lateral/tag.svg"];
+
         const enlaces = ["#seccion1", "#seccion2", "#seccion3", "#seccion4", "#seccion4"];
+
+
         // Crear enlaces con imágenes
         imagenes.forEach((src, index) => {
-            const etiquetaA = new EtiquetaA(document.createElement("a"));
-            const enlace = etiquetaA.crearEtiqueta(document.createElement("a"));
-            etiquetaA.insertarAtributoEnEtiqueta(enlaces[index]);
-            const etiquetaImg = new EtiquetaImg(document.createElement("img"));
-            const img = etiquetaImg.crearEtiqueta(document.createElement("img"));
-            etiquetaImg.insertarAtributoEnEtiqueta(src);
-            // Añadir imagen dentro del enlace y el enlace al contenedor
-            enlace.appendChild(img);
-            this.contenedor.appendChild(enlace);
+            //instancia de etiqueta A
+            const etiquetaA = new EtiquetaA();
+            etiquetaA.insertarAtributoEnEtiqueta("href",enlaces[index]);
+
+            //instancia de  etiqueta Img
+            const etiquetaImg = new EtiquetaImg();
+            etiquetaImg.insertarAtributoEnEtiqueta("src",src);
+
+            etiquetaA.getElemento().appendChild(etiquetaImg.getElemento());
+            this.contenedor.appendChild(etiquetaA.getElemento());
         });
         // Insertar el contenedor en el HTML
         document.body.appendChild(this.contenedor);
