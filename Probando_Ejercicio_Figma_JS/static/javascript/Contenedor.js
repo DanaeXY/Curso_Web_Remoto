@@ -9,16 +9,17 @@ class Contenedor{
         
         this.contenedor = contenedorPadre.getElemento();
         contenedorPadre.insertarAtributoEnEtiqueta("class", "contenedor");
-        contenedorPadre.introduzcoEtiquetaEnHTML();
+        contenedorPadre.introduzcoEtiquetaEnHTML();//ok crea el div contenedor
 
-        const navegacionLateral = new NavegacionLateral();
-        const menuCentral = new MenuCentral()
+        const navegacionLateral = new NavegacionLateral().getElemento();
+        const menuCentral = new MenuCentral().getElemento();
 
-        contenedorPadre.getElemento().appendChild(navegacionLateral);
-        contenedorPadre.getElemento().appendChild(menuCentral);
-        
-        this.contenedor.appendChild(contenedorPadre.getElemento());
+        this.contenedor.appendChild(navegacionLateral);
+        this.contenedor.appendChild(menuCentral);
+
+        document.body.appendChild(this.contenedor);
     }
+    
 }
 
 export {Contenedor}

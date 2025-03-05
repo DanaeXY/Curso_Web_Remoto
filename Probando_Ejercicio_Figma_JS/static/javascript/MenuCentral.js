@@ -50,8 +50,9 @@ class MenuCentral {
             
         });
 
-        
-
+    }
+    getElemento() {
+        return this.divContenedor;
     }
 
 }

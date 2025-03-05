@@ -34,8 +34,10 @@ class NavegacionLateral {
             etiquetaA.getElemento().appendChild(etiquetaImg.getElemento());
             this.contenedor.appendChild(etiquetaA.getElemento());
         });
-        // Insertar el contenedor en el HTML
-        document.body.appendChild(this.contenedor);
+       
+    }
+    getElemento() {
+        return this.contenedor;
     }
 }
 export { NavegacionLateral };
