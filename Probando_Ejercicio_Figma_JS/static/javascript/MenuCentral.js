@@ -1,6 +1,7 @@
 import { EtiquetaDiv } from "./EtiquetaDiv.js";
 import { EtiquetaA } from "./EtiquetaA.js";
 import { EtiquetaImg } from "./EtiquetaImg.js";
+import {EtiquetaTexto} from "./EtiquetaTexto.js";
 
 class MenuCentral {
     constructor() {
@@ -10,7 +11,7 @@ class MenuCentral {
         //contenedor
         this.divContenedor = etiquetaDiv.getElemento();
         etiquetaDiv.insertarAtributoEnEtiqueta("class", "menu_central");
-        etiquetaDiv.introduzcoEtiquetaEnHTML();
+        etiquetaDiv.introduzcoEtiquetaEnHTML();//OK introduce la etiqueta div con clase menu_central
 
         //array de objetos con nombres, imagenes y enlaces
         const imagenes_enlaces = [
@@ -22,30 +23,41 @@ class MenuCentral {
             {texto: "Settings", src: "../imagenes/menu_central/settings.svg", href: "#settings"}
         ];
 
-        imagenes_enlaces.forEach((texto, src, href)=> {
+        imagenes_enlaces.forEach(({texto, src, href})=> {
+            //etiqueta para cada cuadro
+            const etiquetaCuadro = new EtiquetaDiv();
+            etiquetaCuadro.insertarAtributoEnEtiqueta("class", "cuadro");
+
+            //incluir texto
+            const etiquetaTexto = new EtiquetaTexto();
+            etiquetaTexto.getElemento().textContent =texto;
 
             //instanciar etiqueta para enlace y darle el atributo href
             const etiquetaA = new EtiquetaA();
-            etiquetaA.insertarAtributoEnEtiqueta("href", imagenes_enlaces[href]);
+            etiquetaA.insertarAtributoEnEtiqueta("href", href);
 
             //intanciar etiquta imagen para darse src
             const etiquetaImg = new EtiquetaImg();
-            etiquetaImg.insertarAtributoEnEtiqueta("src", imagenes_enlaces[src]);
+            etiquetaImg.insertarAtributoEnEtiqueta("src", src);
 
 
-
+            
             etiquetaA.getElemento().appendChild(etiquetaImg.getElemento());
+            etiquetaCuadro.getElemento().appendChild(etiquetaA.getElemento())
+            etiquetaCuadro.getElemento().appendChild(etiquetaTexto.getElemento());
 
-            this.divContenedor.appendChild(etiquetaA.getElemento());
-
+            this.divContenedor.appendChild(etiquetaCuadro.getElemento());
             
         });
 
+        
+
     }
-
-
-
 
 }
 
 export { MenuCentral }
+
+
+
+
